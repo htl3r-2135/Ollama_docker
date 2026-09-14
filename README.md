@@ -1,3 +1,5 @@
-# Ollama_docker
+# Ollama_docker with local AI Chat
 
-Prototyp für das Testen eines LLM-Chat Interfaces
+Local Ollama Setup for docker with a Vue Web-App as a Chat plattform.
+
+Designed for use in Social Engineering Demos using AI as the Target.
