@@ -1,0 +1,44 @@
+# docker-compose.gpu.yml
+# Ollama with NVIDIA GPU support
+
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-gpu
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # GPU configuration
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # Use all available GPUs
+              count: all
+              capabilities: [gpu]
+    environment:
+      # Optional: Set specific CUDA devices
+      - NVIDIA_VISIBLE_DEVICES=all
+      # Bind to all interfaces on the default port (required for container networking)
+      - OLLAMA_HOST=0.0.0.0:11434
+      # Enable debug logging
+      - OLLAMA_DEBUG=1
+      # Set number of parallel requests
+      - OLLAMA_NUM_PARALLEL=4
+      # Maximum loaded models
+      - OLLAMA_MAX_LOADED_MODELS=2
+      # Keep models in memory (seconds, 0 = forever)
+      - OLLAMA_KEEP_ALIVE=300
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  ollama_data:
