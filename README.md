@@ -2,7 +2,7 @@
 
 A lightweight, containerized chat interface powered by Ollama and built with Vue 3. This project provides a self-contained local LLM chat platform designed for testing, prototyping, and social engineering demonstrations.
 
-## 🎯 Overview
+## Overview
 
 **Ollama_docker** combines:
 - **Ollama**: A local, open-source LLM runtime
@@ -11,21 +11,21 @@ A lightweight, containerized chat interface powered by Ollama and built with Vue
 
 This setup allows you to run a fully functional AI chat system entirely on your local machine without external API dependencies.
 
-## ✨ Features
+## Features
 
-- 🤖 **Local LLM**: Run large language models completely offline with Ollama
-- 💬 **Chat Interface**: Intuitive web-based chat UI built with Vue 3
-- 🔒 **Privacy-First**: All data stays local; no external API calls
-- 🐳 **Docker Ready**: Single-command deployment with docker-compose
-- 🛡️ **Demo-Ready**: Designed for security testing and social engineering demonstrations
+- **Local LLM**: Run large language models completely offline with Ollama
+- **Chat Interface**: Intuitive web-based chat UI built with Vue 3
+- **Privacy-First**: All data stays local; no external API calls
+- **Docker Ready**: Single-command deployment with docker-compose
+- **Demo-Ready**: Designed for security testing and social engineering demonstrations
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Docker** & **Docker Compose** (or Node.js 18+ for local development)
 - **Ollama** installed locally or via container
 - At least 4GB RAM available (more for larger models)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Using Docker Compose (Recommended)
 
@@ -65,7 +65,7 @@ npm run build
 npm run preview
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -82,7 +82,7 @@ npm run preview
 └── .gitignore                   # Git ignore rules
 ```
 
-## 🔧 Technology Stack
+## Technology Stack
 
 | Technology | Purpose |
 |-----------|---------|
@@ -92,7 +92,7 @@ npm run preview
 | **Ollama** | Local LLM runtime engine |
 | **Docker** | Containerization & orchestration |
 
-## 🛠️ Configuration
+## Configuration
 
 ### Ollama Models
 
@@ -111,7 +111,7 @@ ollama pull orca-mini       # Small, fast model
 If using custom Ollama API endpoints, configure them in:
 - `testing_LLM/src/` (check for API client configuration)
 
-## 📖 Usage
+## Usage
 
 1. **Start the application** (via Docker or local dev)
 2. **Open your browser** to `http://localhost:5173`
@@ -120,7 +120,7 @@ If using custom Ollama API endpoints, configure them in:
 
 The chat interface communicates with the Ollama API backend running on `http://localhost:11434`.
 
-## 🔌 API Integration
+## API Integration
 
 The Vue app communicates with Ollama via its REST API:
 
@@ -137,14 +137,14 @@ Example request structure:
 }
 ```
 
-## 🎓 Use Cases
+## Use Cases
 
 - **Prototyping**: Test LLM chat interfaces locally
 - **Testing**: Evaluate model responses before production
 - **Social Engineering Demos**: Demonstrate AI-assisted social engineering concepts
 - **Education**: Learn about LLMs and web development together
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
@@ -153,7 +153,7 @@ Example request structure:
 | Out of memory | Reduce model size or allocate more Docker memory |
 | Node modules missing | Run `cd testing_LLM && npm install` |
 
-## 📝 Development
+## Development
 
 ### Run tests
 ```bash
@@ -173,28 +173,3 @@ cd testing_LLM
 npm run build
 npm run preview
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Report issues
-- Suggest improvements
-- Submit pull requests
-
-## 📄 License
-
-This project is provided as-is for educational and testing purposes.
-
-## ⚠️ Disclaimer
-
-This tool is designed for legitimate security testing and educational demonstrations. Ensure you have proper authorization before conducting any social engineering tests or security assessments.
-
-## 📞 Support
-
-For issues, questions, or feedback:
-- Open an [issue](https://github.com/htl3r-2135/Ollama_docker/issues)
-- Check existing issues for solutions
-
----
-
-**Happy chatting! 🚀**
